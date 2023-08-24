@@ -1,37 +1,37 @@
-import event from '../../unit/event'
-import states from '../states'
+import event from "../../unit/event";
+import states from "../states";
 
-const down = store => {
-  store.commit('key_pause', true)
+const down = (store) => {
+  store.commit("key_pause", true);
   event.down({
-    key: 'p',
+    key: "p",
     once: true,
     callback: () => {
-      const state = store.state
+      const state = store.state;
       if (state.lock) {
-        return
+        return;
       }
-      const cur = state.cur
-      const isPause = state.pause
+      const cur = state.cur;
+      const isPause = state.pause;
       if (cur !== null) {
-        // 暂停
-        states.pause(!isPause)
+        // 일시 정지
+        states.pause(!isPause);
       } else {
-        // 新的开始
-        states.start()
+        // 새로 시작
+        states.start();
       }
-    }
-  })
-}
+    },
+  });
+};
 
-const up = store => {
-  store.commit('key_pause', false)
+const up = (store) => {
+  store.commit("key_pause", false);
   event.up({
-    key: 'p'
-  })
-}
+    key: "p",
+  });
+};
 
 export default {
   down,
-  up
-}
+  up,
+};
