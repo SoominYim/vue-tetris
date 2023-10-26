@@ -17,20 +17,9 @@
     <div class="guide left">
       <p>
         <a href="https://github.com/SoominYim/vue-tetris" rel="noopener noreferrer" target="_blank"
-          v-bind="{ title: linkTitle }">{{ github }}:</a>
-        <br />
-        <iframe src="https://ghbtns.com/github-btn.html?user=Binaryify&repo=vue-tetris&type=star&count=true"
-          frameBorder="0" scrolling="0" width="170px" height="20px"
-          style="transform: scale(1.68);transform-origin: center left" />
-        <br />
-        <iframe src="https://ghbtns.com/github-btn.html?user=Binaryify&repo=vue-tetris&type=fork&count=true"
-          frameBorder="0" scrolling="0" width="170px" height="20px"
-          style="transform: scale(1.68);transform-origin: center left" />
+          v-bind="{ title: linkTitle }">{{ github }}</a>
       </p>
       <div class="space">SPACE</div>
-    </div>
-    <div class="guide qr">
-      <img :src="QRSrc" v-bind="{ title: QRTitle, alt: QRCode }" />
     </div>
   </div>
 </template>
@@ -38,4 +27,6 @@
 <script src="./index.js">
 </script>
 
-<style lang="less">@import './index.less';</style>
+<style lang="less">
+@import './index.less';
+</style>
